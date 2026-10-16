@@ -8,7 +8,7 @@
   <meta property="og:title" content="Our Cinema — a movie night for two">
   <meta property="og:description" content="A tiny two-person film club: pick tonight's movie together, mark it watched, keep the log.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#faf7f5">
+  <meta name="theme-color" content="#090b20">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -16,21 +16,23 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-page="movies">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="https://menaammarpro.github.io/">All projects</a>
-        <a href="https://menaammarpro.github.io/love-adventure/">Adventure</a>
-        <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
-      </nav>
-    </div>
+    <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="https://menaammarpro.github.io/">All projects</a>
+      <a href="https://menaammarpro.github.io/love-adventure/">Adventure</a>
+      <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
   </header>
 
-  <main class="container">
+  <main>
     <section class="hero">
       <p class="eyebrow">A film club of two</p>
-      <h1>Our cinema</h1>
+      <h1>Our <span>cinema</span></h1>
       <p class="subtitle">Pick tonight's movie, mark it watched, keep the little log.</p>
     </section>
 
@@ -44,9 +46,9 @@
         <p id="pick-meta" class="pick-meta"></p>
         <p id="pick-note" class="pick-note"></p>
         <div class="pick-actions">
-          <button id="shuffle" class="btn btn-primary" type="button">Shuffle</button>
-          <button id="watched" class="btn btn-ghost" type="button">We watched it</button>
-          <button id="share-pick" class="btn btn-ghost" type="button">Send this pick</button>
+          <button id="shuffle" class="button button-primary" type="button">Shuffle</button>
+          <button id="watched" class="button button-ghost" type="button">We watched it</button>
+          <button id="share-pick" class="button button-ghost" type="button">Send this pick</button>
         </div>
         <p id="action-note" class="action-note">&nbsp;</p>
       </div>
@@ -57,7 +59,7 @@
       <div class="moods" id="moods"></div>
     </section>
 
-    <section class="panel stats-row">
+    <section class="stats-row">
       <div class="stat-card">
         <span class="stat-num" id="watched-count">0</span>
         <span class="stat-label">watched</span>
@@ -86,10 +88,8 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
-      <p class="footer-note">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
-    </div>
+    <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+    <p class="footer-small">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
   </footer>
 
   <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
