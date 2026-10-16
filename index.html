@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Cinema — a movie night for two</title>
+  <meta name="description" content="A tiny two-person film club: pick tonight's movie together, mark it watched, keep the log.">
+  <meta property="og:title" content="Our Cinema — a movie night for two">
+  <meta property="og:description" content="A tiny two-person film club: pick tonight's movie together, mark it watched, keep the log.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#faf7f5">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="movies">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="https://menaammarpro.github.io/">All projects</a>
+        <a href="https://menaammarpro.github.io/love-adventure/">Adventure</a>
+        <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">A film club of two</p>
+      <h1>Our cinema</h1>
+      <p class="subtitle">Pick tonight's movie, mark it watched, keep the little log.</p>
+    </section>
+
+    <p id="arrive-note" class="arrive-note" hidden></p>
+
+    <section class="panel pick-panel">
+      <h2>Tonight's pick</h2>
+      <div class="pick-card" id="pick-card">
+        <span class="pick-icon" aria-hidden="true">&#127916;</span>
+        <h3 id="pick-title">—</h3>
+        <p id="pick-meta" class="pick-meta"></p>
+        <p id="pick-note" class="pick-note"></p>
+        <div class="pick-actions">
+          <button id="shuffle" class="btn btn-primary" type="button">Shuffle</button>
+          <button id="watched" class="btn btn-ghost" type="button">We watched it</button>
+          <button id="share-pick" class="btn btn-ghost" type="button">Send this pick</button>
+        </div>
+        <p id="action-note" class="action-note">&nbsp;</p>
+      </div>
+    </section>
+
+    <section class="panel filters-panel">
+      <h2>Mood</h2>
+      <div class="moods" id="moods"></div>
+    </section>
+
+    <section class="panel stats-row">
+      <div class="stat-card">
+        <span class="stat-num" id="watched-count">0</span>
+        <span class="stat-label">watched</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="pool-count">0</span>
+        <span class="stat-label">in this mood</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="last-watch">never</span>
+        <span class="stat-label">last movie night</span>
+      </div>
+    </section>
+
+    <section class="panel log-panel">
+      <h2>What we've seen</h2>
+      <ul id="watch-log" class="watch-log">
+        <li class="empty-note">Nothing yet — tonight could be the first.</li>
+      </ul>
+    </section>
+
+    <section class="panel shelf-panel">
+      <h2>The shelf</h2>
+      <ul id="shelf" class="shelf"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+      <p class="footer-note">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
